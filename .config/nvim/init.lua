@@ -331,6 +331,14 @@ lspconfig.golangci_lint_ls.setup {
 	filetypes = {'go','gomod'}
 }
 
+lspconfig.clangd.setup {
+    on_attach = function (client, bufnr)
+        client.server_capabilities.signatureHelpProvider = false
+        on_attach(client, bufnr)
+    end,
+    capabilities = configs.capabilities,
+}
+
 -- Setup neovim lua configuration
 require('neodev').setup()
 
