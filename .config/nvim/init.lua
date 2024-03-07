@@ -76,6 +76,39 @@ lazy.setup({
         cmd = 'Telescope'
     },
     {
+        'nvim-treesitter/nvim-treesitter',
+        config = function ()
+            local treesitter = require("nvim-treesitter.configs")
+
+            treesitter.setup({
+                highlight = { enable = true },
+                indent = { enable = true },
+
+                ensure_installed = {
+                    "cpp",
+                    "go",
+                    "cpp",
+                    "markdown",
+                    "json",
+                    "javascript",
+                    "vim",
+                    "lua",
+                    "gitignore",
+                },
+
+                incremental_selection = {
+                    enable = true,
+                    keymaps = {
+                        init_selection = "<C-space>",
+                        node_incremental = "<C-space>",
+                        scope_incremental = false,
+                        node_decremental = "<C-bs>",
+                    },
+                },
+            })
+        end,
+    },
+    {
         'nvim-treesitter/nvim-treesitter-context',
         config = function()
             require'treesitter-context'.setup{
