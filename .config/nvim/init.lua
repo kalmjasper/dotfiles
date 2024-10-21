@@ -163,7 +163,6 @@ lazy.setup({
 vim.cmd('filetype off')
 vim.cmd('syntax on')
 vim.o.history = 1000
-vim.o.t_Co = 256
 vim.o.mouse = 'a'
 vim.wo.number = true
 vim.wo.relativenumber = true
