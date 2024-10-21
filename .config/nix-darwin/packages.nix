@@ -8,4 +8,6 @@ with pkgs; [
   htop
   tmux
   stow
+  ripgrep
+  which
 ]

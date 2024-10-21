@@ -1,3 +1,5 @@
+shell.program = "/usr/local/bin/fish"
+
 keyboard.bindings = [
     { key = "Left", mods = "Alt", chars = "\u001bb" },
     { key = "Right", mods = "Alt", chars = "\u001bf" },
